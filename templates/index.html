@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アメリカン親父ギャグボット</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>アメリカン親父ギャグボット</h1>
+        <button onclick="getJoke()">親父ギャグを取得</button>
+        <div id="chat-box" class="chat-box"> <!-- チャットボックスをここに追加 -->
+            <p id="setup-en"></p>
+            <p id="punchline-en"></p>
+            <p id="setup-ja"></p>
+            <p id="punchline-ja"></p>
+        </div>
+
+        <!-- 注意書き -->
+        <div id="notice">
+            <p>注意: 親父ギャグなので面白くないです。</p>
+            <p>直訳なので日本語訳の意味がわからない場合があります。その場合はより高性能なChatGPTに聞いてください。</p>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
